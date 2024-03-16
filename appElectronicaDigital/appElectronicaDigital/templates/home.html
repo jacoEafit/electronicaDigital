@@ -2,15 +2,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>electrónicaDigital</title>
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronica digital</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
-    <div class="container">
-        <h1 class="display-1">Título Gigante</h1>
+  <div class="container-sm mt-5">
+    <div class="row justify-content-center p-5">
+      <div class="col-md-6 border rounded">
+        <h2 class="text-center mb-4">Sistema de iluminación doméstico</h2>
+        <form class="container-sm">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Estado de conexión:</label>
+            <div class="alert alert-warning" role="alert">
+                Conectado/desconectado
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Iluminación externa:</label>
+            <div class="alert alert-info" role="alert">
+                30%
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Cantidad personas en habitación:</label>
+            <div class="alert alert-info" role="alert">
+                2
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="graduacion" class="form-label">Graduar iluminación habitación:</label>
+            <div>
+                <input type="range" id="graduacion" name="graduacion" min="0" max="100" value="50">
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </body>
 </html>
+
+<style>
+    .alert {
+      padding: 0.75rem 1.25rem;
+      font-size: 0.875rem;
+    }
+  </style>
